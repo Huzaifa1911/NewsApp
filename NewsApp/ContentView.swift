@@ -9,13 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            TabView {
+                HomeScreen()
+                    .tabItem {
+                        Label("Home",systemImage: "house")
+                    }
+                Profile()
+                    .tabItem {
+                        Label("Profile",systemImage: "person")
+                    }
+            }
+        }
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        
     }
 }
